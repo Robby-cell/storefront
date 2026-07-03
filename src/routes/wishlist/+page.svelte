@@ -1,6 +1,7 @@
 <script lang="ts">
   import { wishlist } from "$lib/state/wishlist.svelte";
   import ProductCard from "$lib/components/ProductCard.svelte";
+  import { resolve } from "$app/paths";
 </script>
 
 <div class="max-w-7xl mx-auto mt-4">
@@ -25,7 +26,7 @@
         review it later.
       </p>
       <a
-        href="/products"
+        href={resolve("/products")}
         class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-hover active:scale-95 transition-all shadow-lg inline-block"
       >
         Explore Products

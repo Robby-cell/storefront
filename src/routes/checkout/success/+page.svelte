@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   import { page } from "$app/stores";
   import { orders } from "$lib/state/orders.svelte";
   import { region } from "$lib/state/region.svelte";
@@ -72,13 +73,13 @@
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
-        href="/account"
+        href={resolve("/account")}
         class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-hover active:scale-95 transition-all shadow-lg shadow-primary/20"
       >
         View My Orders
       </a>
       <a
-        href="/products"
+        href={resolve("/products")}
         class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 active:scale-95 transition-all"
       >
         Continue Shopping

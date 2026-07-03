@@ -11,6 +11,7 @@
   // Import Svelte's animation engine
   import { fade, fly } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
+  import { resolve } from "$app/paths";
 
   let { children } = $props();
 </script>
@@ -20,7 +21,7 @@
 >
   <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
     <a
-      href="/"
+      href={resolve("/")}
       class="font-bold text-2xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1"
     >
       {storeConfig.name}<span class="text-primary">.</span>
@@ -87,14 +88,14 @@
       </div>
 
       <a
-        href="/products"
+        href={resolve("/products")}
         class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition"
         >Shop</a
       >
 
       <!-- account button -->
       <a
-        href="/account"
+        href={resolve("/account")}
         class="flex items-center text-sm font-medium text-slate-700 dark:text-slate-300 relative cursor-pointer hover:text-primary transition group mr-2"
         aria-label="My Account"
       >
@@ -107,7 +108,7 @@
 
       <!-- wishlist button -->
       <a
-        href="/wishlist"
+        href={resolve("/wishlist")}
         class="flex items-center text-sm font-medium text-slate-700 dark:text-slate-300 relative cursor-pointer hover:text-rose-500 transition group mr-3"
       >
         <span
@@ -215,7 +216,7 @@
               <div class="flex-1 flex flex-col justify-between">
                 <div>
                   <a
-                    href="/product/{item.product.id}"
+                    href={resolve("/product/{item.product.id}")}
                     onclick={() => cart.close()}
                     class="font-medium text-sm hover:text-primary dark:text-slate-100 line-clamp-2 leading-snug"
                     >{item.product.title}</a
@@ -287,7 +288,7 @@
         </p>
 
         <a
-          href="/checkout"
+          href={resolve("/checkout")}
           onclick={() => cart.close()}
           class="w-full bg-primary text-white py-4 rounded-full font-semibold hover:bg-primary-hover active:scale-95 transition-all shadow-lg shadow-primary/25 flex justify-center items-center gap-2"
         >

@@ -7,6 +7,7 @@
   import { region } from "$lib/state/region.svelte";
   import ProductCard from "$lib/components/ProductCard.svelte";
   import { storeConfig } from "$lib/config"; // Needed for SEO store name
+  import { resolve } from "$app/paths";
 
   let { data } = $props();
   let product = $derived(data.product);
@@ -87,9 +88,9 @@
 <nav
   class="flex items-center text-sm text-slate-500 dark:text-slate-400 mb-6 mt-2"
 >
-  <a href="/" class="hover:text-primary transition">Home</a>
+  <a href={resolve("/")} class="hover:text-primary transition">Home</a>
   <span class="mx-2">›</span>
-  <a href="/products" class="hover:text-primary transition">Shop</a>
+  <a href={resolve("/products")} class="hover:text-primary transition">Shop</a>
   <span class="mx-2">›</span>
   <span class="capitalize">{product.category}</span>
 </nav>

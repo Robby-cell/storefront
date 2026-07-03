@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   import { orders } from "$lib/state/orders.svelte";
   import { region } from "$lib/state/region.svelte";
 </script>
@@ -51,7 +52,7 @@
         When you buy something, your receipt will show up here.
       </p>
       <a
-        href="/products"
+        href={resolve("/products")}
         class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-hover transition-all"
         >Start Shopping</a
       >
@@ -125,7 +126,7 @@
                   </div>
                   <div class="flex-1">
                     <a
-                      href="/product/{item.product.id}"
+                      href={resolve("/product/{item.product.id}")}
                       class="font-medium text-slate-900 dark:text-white hover:text-primary transition line-clamp-2"
                     >
                       {item.product.title}

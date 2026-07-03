@@ -4,6 +4,7 @@
   import { region } from "$lib/state/region.svelte";
   import { toast } from "$lib/state/toast.svelte";
   import { wishlist } from "$lib/state/wishlist.svelte";
+  import { resolve } from "$app/paths";
 
   let { product }: { product: Product } = $props();
 
@@ -37,7 +38,7 @@
   </button>
 
   <a
-    href="/product/{product.id}"
+    href={resolve("/product/{product.id}")}
     class="flex-1 flex flex-col focus:outline-none"
   >
     <div

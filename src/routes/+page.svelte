@@ -2,6 +2,7 @@
   import { storeConfig } from "$lib/config";
   import { recent } from "$lib/state/recent.svelte";
   import ProductCard from "$lib/components/ProductCard.svelte";
+  import { resolve } from "$app/paths";
 </script>
 
 <section
@@ -22,7 +23,7 @@
 
     <div class="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto">
       <a
-        href="/products"
+        href={resolve("/products")}
         class="w-full sm:w-auto bg-primary text-white px-10 py-4 rounded-full font-semibold hover:bg-primary-hover active:scale-95 transition-all shadow-lg shadow-primary/20 flex justify-center"
       >
         Start Shopping
@@ -41,7 +42,7 @@
         Jump back in
       </h2>
       <a
-        href="/products"
+        href={resolve("/products")}
         class="text-primary font-medium hover:underline text-sm md:text-base mb-1"
         >View all &rarr;</a
       >

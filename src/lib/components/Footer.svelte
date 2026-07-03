@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   import { storeConfig } from "$lib/config";
 </script>
 
@@ -12,7 +13,7 @@
       <!-- Brand & Newsletter (Takes up 4 columns on large screens) -->
       <div class="lg:col-span-4">
         <a
-          href="/"
+          href={resolve("/")}
           class="font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1 mb-4"
         >
           {storeConfig.name}<span class="text-primary">.</span>
@@ -52,23 +53,27 @@
           <h3 class="font-bold text-slate-900 dark:text-white mb-4">Shop</h3>
           <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
             <li>
-              <a href="/products" class="hover:text-primary transition-colors"
-                >All Products</a
+              <a
+                href={resolve("/products")}
+                class="hover:text-primary transition-colors">All Products</a
               >
             </li>
             <li>
-              <a href="/products" class="hover:text-primary transition-colors"
-                >Electronics</a
+              <a
+                href={resolve("/products")}
+                class="hover:text-primary transition-colors">Electronics</a
               >
             </li>
             <li>
-              <a href="/products" class="hover:text-primary transition-colors"
-                >Jewelry</a
+              <a
+                href={resolve("/products")}
+                class="hover:text-primary transition-colors">Jewelry</a
               >
             </li>
             <li>
-              <a href="/products" class="hover:text-primary transition-colors"
-                >Clothing</a
+              <a
+                href={resolve("/products")}
+                class="hover:text-primary transition-colors">Clothing</a
               >
             </li>
           </ul>
@@ -77,23 +82,28 @@
           <h3 class="font-bold text-slate-900 dark:text-white mb-4">Support</h3>
           <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
-                >Help Center</a
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors">Help Center</a
               >
             </li>
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
-                >Track Order</a
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors">Track Order</a
               >
             </li>
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors"
                 >Returns & Refunds</a
               >
             </li>
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
-                >Contact Us</a
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors">Contact Us</a
               >
             </li>
           </ul>
@@ -102,18 +112,21 @@
           <h3 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h3>
           <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
-                >Terms of Service</a
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors">Terms of Service</a
               >
             </li>
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
-                >Privacy Policy</a
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors">Privacy Policy</a
               >
             </li>
             <li>
-              <a href="#top" class="hover:text-primary transition-colors"
-                >Shipping Policy</a
+              <a
+                href={resolve("#top")}
+                class="hover:text-primary transition-colors">Shipping Policy</a
               >
             </li>
           </ul>
