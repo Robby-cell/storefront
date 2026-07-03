@@ -3,6 +3,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	preprocess: vitePreprocess(),
 	kit: {
 		// Use the static adapter with a fallback for any dynamic routes it misses
@@ -13,10 +14,8 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		// IMPORTANT: If your GitHub repo is named "storefront", change this to '/storefront'
-		// If you are deploying to username.github.io, leave it as ''
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.argv.includes('dev') ? 'storefront' : process.env.BASE_PATH
 		}
 	}
 };

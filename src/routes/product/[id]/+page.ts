@@ -1,6 +1,10 @@
 import type { PageLoad } from "./$types";
 import type { Product } from "$lib/types";
 
+// Explicitly turn OFF prerendering for this dynamic route!
+// This stops the crawler from looking for [id] parameters.
+export const prerender = false;
+
 export const load: PageLoad = async ({ fetch, params }) => {
   // 1. Fetch main product
   const res = await fetch(`https://fakestoreapi.com/products/${params.id}`);
@@ -17,3 +21,5 @@ export const load: PageLoad = async ({ fetch, params }) => {
 
   return { product, related };
 };
+
+export const entries = () => [];
