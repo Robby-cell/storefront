@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  :root[data-theme="blue"] {
+    --color-primary: 37 99 235;
+    --color-primary-hover: 29 78 216;
+  }
+  :root[data-theme="emerald"] {
+    --color-primary: 5 150 105;
+    --color-primary-hover: 4 120 87;
+  }
+  :root[data-theme="rose"] {
+    --color-primary: 225 29 72;
+    --color-primary-hover: 190 18 60;
+  }
+  :root[data-theme="zinc"] {
+    --color-primary: 39 39 42;
+    --color-primary-hover: 24 24 27;
+  }
+
+  /* When Dark Mode is on, the Zinc theme becomes Crisp White */
+  :root.dark[data-theme="zinc"] {
+    --color-primary: 248 250 252; /* Bright Slate 50 */
+    --color-primary-hover: 226 232 240; /* Slate 200 */
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 min-h-screen transition-colors duration-300;
+  }
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+/* 
+  Because the Zinc theme turns primary elements white in dark mode, 
+  we must force the text inside those buttons to be dark, 
+  otherwise it will be white-on-white! 
+*/
+:root.dark[data-theme="zinc"] .bg-primary,
+:root.dark[data-theme="zinc"] .hover\:bg-primary:hover,
+:root.dark[data-theme="zinc"] .dark\:hover\:bg-primary:hover {
+  color: #0f172a !important; /* Forces text to Slate-900 (Dark) */
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
