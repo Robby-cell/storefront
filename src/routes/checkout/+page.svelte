@@ -4,10 +4,11 @@
   import { region, type CountryCode } from "$lib/state/region.svelte";
   import { goto } from "$app/navigation";
   import { browser } from "$app/environment";
+  import { resolve } from "$app/paths";
 
   $effect(() => {
     if (browser && cart.items.length === 0) {
-      goto("/products");
+      goto(resolve("/products"));
     }
   });
 
@@ -68,7 +69,7 @@
     cart.clear();
 
     // 3. Redirect with the real Order ID in the URL
-    goto(`/checkout/success?id=${orderId}`);
+    goto(resolve(`/checkout/success?id=${orderId}`));
   }
 </script>
 

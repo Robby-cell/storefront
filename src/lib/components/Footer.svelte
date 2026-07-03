@@ -82,28 +82,23 @@
           <h3 class="font-bold text-slate-900 dark:text-white mb-4">Support</h3>
           <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors">Help Center</a
+              <a href="#top" class="hover:text-primary transition-colors"
+                >Help Center</a
               >
             </li>
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors">Track Order</a
+              <a href="#top" class="hover:text-primary transition-colors"
+                >Track Order</a
               >
             </li>
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors"
+              <a href="#top" class="hover:text-primary transition-colors"
                 >Returns & Refunds</a
               >
             </li>
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors">Contact Us</a
+              <a href="#top" class="hover:text-primary transition-colors"
+                >Contact Us</a
               >
             </li>
           </ul>
@@ -112,21 +107,18 @@
           <h3 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h3>
           <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors">Terms of Service</a
+              <a href="#top" class="hover:text-primary transition-colors"
+                >Terms of Service</a
               >
             </li>
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors">Privacy Policy</a
+              <a href="#top" class="hover:text-primary transition-colors"
+                >Privacy Policy</a
               >
             </li>
             <li>
-              <a
-                href={resolve("#top")}
-                class="hover:text-primary transition-colors">Shipping Policy</a
+              <a href="#top" class="hover:text-primary transition-colors"
+                >Shipping Policy</a
               >
             </li>
           </ul>
