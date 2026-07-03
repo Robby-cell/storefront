@@ -126,7 +126,7 @@
                   </div>
                   <div class="flex-1">
                     <a
-                      href={resolve("/product/{item.product.id}")}
+                      href={resolve(`/product/${item.product.id}`)}
                       class="font-medium text-slate-900 dark:text-white hover:text-primary transition line-clamp-2"
                     >
                       {item.product.title}

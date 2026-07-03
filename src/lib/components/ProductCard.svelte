@@ -38,7 +38,7 @@
   </button>
 
   <a
-    href={resolve("/product/{product.id}")}
+    href={resolve(`/product/${product.id}`)}
     class="flex-1 flex flex-col focus:outline-none"
   >
     <div

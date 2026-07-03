@@ -216,7 +216,7 @@
               <div class="flex-1 flex flex-col justify-between">
                 <div>
                   <a
-                    href={resolve("/product/{item.product.id}")}
+                    href={resolve(`/product/${item.product.id}`)}
                     onclick={() => cart.close()}
                     class="font-medium text-sm hover:text-primary dark:text-slate-100 line-clamp-2 leading-snug"
                     >{item.product.title}</a

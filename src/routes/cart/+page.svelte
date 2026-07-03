@@ -79,7 +79,7 @@
 
             <div class="flex-1 text-center sm:text-left">
               <a
-                href={resolve("/product/{item.product.id}")}
+                href={resolve(`/product/${item.product.id}`)}
                 class="font-medium hover:text-primary dark:text-slate-100 line-clamp-1"
                 >{item.product.title}</a
               >
